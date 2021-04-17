@@ -3,12 +3,18 @@ package ua.nure.bondarenko.task1;
 import java.util.Arrays;
 
 class Part1 {
-    public static int getSun(String[] array){
-        return Arrays.stream(array)
-                .mapToInt(Integer::parseInt)
-                .sum();
+    public static int getSum(String[] array) {
+        try {
+            return Arrays.stream(array)
+                    .mapToInt(Integer::parseInt)
+                    .sum();
+        } catch (NumberFormatException e) {
+            System.out.println("Input correct sequence");
+        }
+        return 0;
     }
+
     public static void main(String[] args) {
-        System.out.println(getSun(args));
+        System.out.println(getSum(new String[]{"1","a"}));
     }
 }
