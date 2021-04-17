@@ -2,7 +2,7 @@ package ua.nure.bondarenko.task1;
 
 import java.util.Arrays;
 
-class Part1 {
+public class Part1 {
     public static int getSum(String[] array) {
         try {
             return Arrays.stream(array)
@@ -15,6 +15,6 @@ class Part1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(getSum(new String[]{"1","a"}));
+        System.out.println(getSum(args));
     }
 }
