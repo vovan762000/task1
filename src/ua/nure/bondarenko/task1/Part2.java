@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Part2 {
-    public static String printReverseOrder(String[] array){
+    public static String getReverseOrder(String[] array){
         List<String> listFromArray = Arrays.asList(array);
         Collections.reverse(listFromArray);
         return listFromArray.stream().collect(Collectors.joining(" "));
     }
 
     public static void main(String[] args) {
-        System.out.println(printReverseOrder(args));
+        System.out.println(getReverseOrder(args));
     }
 }
