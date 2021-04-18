@@ -2,6 +2,7 @@ package ua.nure.bondarenko.task1;
 
 import java.util.ArrayList;
 import java.util.List;
+import static ua.nure.bondarenko.task1.Util.checkInputLikeDigit;
 
 public class Part5 {
     public static boolean isPrime(int n) {
@@ -28,15 +29,12 @@ public class Part5 {
     }
 
     public static void main(String[] args) {
-        int digitsNumber = 0;
-        try {
-            digitsNumber = Integer.parseInt(args[0]);
-        } catch (NumberFormatException e) {
-            System.out.println("Input correct data");
-        }
-        int[] simpleArray = getPrimeNumbers(digitsNumber);
-        for (int i = 0; i < simpleArray.length; i++) {
-            System.out.print(simpleArray[i] + (i == simpleArray.length - 1 ? "" : " "));
+        if (checkInputLikeDigit(args)) {
+            int digitsNumber = Integer.parseInt(args[0]);
+            int[] simpleArray = getPrimeNumbers(digitsNumber);
+            for (int i = 0; i < simpleArray.length; i++) {
+                System.out.print(simpleArray[i] + (i == simpleArray.length - 1 ? "" : " "));
+            }
         }
     }
 }

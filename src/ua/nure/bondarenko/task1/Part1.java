@@ -1,6 +1,7 @@
 package ua.nure.bondarenko.task1;
 
 import java.util.Arrays;
+import static ua.nure.bondarenko.task1.Util.*;
 
 public class Part1 {
     public static int getSum(String[] array) {
@@ -15,6 +16,8 @@ public class Part1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(getSum(args));
+        if (checkInputLikeDigit(args)) {
+            System.out.println(getSum(args));
+        }
     }
 }
