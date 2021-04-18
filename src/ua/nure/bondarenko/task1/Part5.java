@@ -28,13 +28,16 @@ public class Part5 {
         return simpleList.stream().mapToInt(Integer::intValue).toArray();
     }
 
+    public static void printPrimeNumbers(String[] args){
+        int digitsNumber = Integer.parseInt(args[0]);
+        int[] simpleArray = getPrimeNumbers(digitsNumber);
+        for (int i = 0; i < simpleArray.length; i++) {
+            System.out.print(simpleArray[i] + (i == simpleArray.length - 1 ? "" : " "));
+        }
+    }
     public static void main(String[] args) {
         if (checkInputLikeDigit(args)) {
-            int digitsNumber = Integer.parseInt(args[0]);
-            int[] simpleArray = getPrimeNumbers(digitsNumber);
-            for (int i = 0; i < simpleArray.length; i++) {
-                System.out.print(simpleArray[i] + (i == simpleArray.length - 1 ? "" : " "));
-            }
+        printPrimeNumbers(args);
         }
     }
 }

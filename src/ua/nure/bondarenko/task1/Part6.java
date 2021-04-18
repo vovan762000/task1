@@ -38,13 +38,18 @@ public class Part6 {
         return primeFactorsMap;
     }
 
+    public static void printPrimeFactors(String[] args){
+        int number = Integer.parseInt(args[0]);
+        StringBuilder output = new StringBuilder(number + " =");
+        for (Map.Entry<Integer, Integer> entry : primeFactors(number).entrySet()) {
+            output.append(" " + entry.getKey() + "^" + entry.getValue());
+        }
+        System.out.println(output);
+    }
+
     public static void main(String[] args) {
         if (checkInputLikeDigit(args)) {
-            StringBuilder output = new StringBuilder(args + " =");
-            for (Map.Entry<Integer, Integer> entry : primeFactors(360).entrySet()) {
-                output.append(" " + entry.getKey() + "^" + entry.getValue());
-            }
-            System.out.println(output);
+           printPrimeFactors(args);
         }
     }
 }

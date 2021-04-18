@@ -7,7 +7,7 @@ import static ua.nure.bondarenko.task1.Util.checkInputLikeDigit;
 
 public class Part7 {
 
-    public static void getSimpleDigitsWithNaxSum(String[] array) {
+    public static void printSimpleDigitsWithNaxSum(String[] array) {
         List<String> simpleList = new ArrayList<>();
         int numberOfPrimeDigits = Integer.parseInt(array[0]);
         int nextNumber = 2;
@@ -34,7 +34,7 @@ public class Part7 {
 
     public static void main(String[] args) {
         if (checkInputLikeDigit(args)) {
-            getSimpleDigitsWithNaxSum(args);
+            printSimpleDigitsWithNaxSum(args);
         }
     }
 }
