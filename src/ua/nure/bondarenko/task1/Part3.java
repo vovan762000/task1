@@ -14,7 +14,7 @@ public class Part3 {
     }
 
     public static void printGcdLcm(String[] array) {
-        int[] arrayOfInt = arrayOfInt = Arrays.stream(array)
+        int[] arrayOfInt = Arrays.stream(array)
                     .mapToInt(Integer::parseInt)
                     .toArray();
         if (arrayOfInt.length != 2 || arrayOfInt[0] < 0 || arrayOfInt[1] < 0) {
