@@ -3,13 +3,12 @@ package ua.nure.bondarenko.task1;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Part2 {
     public static String getReverseOrder(String[] array){
         List<String> listFromArray = Arrays.asList(array);
         Collections.reverse(listFromArray);
-        return listFromArray.stream().collect(Collectors.joining(" "));
+        return String.join(" ", listFromArray);
     }
 
     public static void main(String[] args) {

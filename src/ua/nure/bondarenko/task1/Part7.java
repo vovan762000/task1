@@ -18,7 +18,7 @@ public class Part7 {
             nextNumber++;
         }
         int maxSum = 0;
-        int tmp = 0;
+        int tmp ;
         int count = 1;
         for (String primeNumber : simpleList) {
             tmp = Part1.getSum(primeNumber.split(""));

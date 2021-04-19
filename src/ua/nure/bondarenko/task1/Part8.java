@@ -4,10 +4,7 @@ import static ua.nure.bondarenko.task1.Util.checkInputLikeDigit;
 
 public class Part8 {
     public static int[][] pascal(int n) {
-        if (n > 66) {
-            throw new RuntimeException("Data overflow");
-        }
-        int triangle[][] = new int[n + 1][n + 1];
+        int[][] triangle = new int[n + 1][n + 1];
         for (int i = 0; i < n; i++) {
             triangle[i][0] = triangle[i][i] = 1;
             for (int k = 1; k < i; k++) {
